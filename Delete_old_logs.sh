@@ -8,8 +8,8 @@ N="\e[0m"
 
 if [ ! -d $SOURCE_DIR ] ;
 then
-echo "$SOURCE_DIR  directory $R not exist"
+echo -e "$SOURCE_DIR  directory $R not exist"
 else
-echo "$G exist"
+echo -e "$G exist"
 fi 
 
