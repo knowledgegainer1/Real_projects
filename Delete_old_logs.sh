@@ -11,4 +11,5 @@ then
 echo "$SOURCE_DIR  directory $R not exist"
 else
 echo "$G exist"
+fi 
 
