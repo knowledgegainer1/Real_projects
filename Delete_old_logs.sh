@@ -6,10 +6,6 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-if [ ! -d $SOURCE_DIR ] ;
-then
-echo -e "$SOURCE_DIR  directory $R not exist"
-else
-echo -e "$G exist"
-fi 
-
+if [ ! -d $SOURCE_DIR ]; then
+    echo -e " $SOURCE_DIR  directory $R not exist"
+fi
