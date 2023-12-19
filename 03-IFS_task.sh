@@ -1,17 +1,17 @@
 #!/bin/bash
 
-file_loc="etc/passwd"
+file_loc="/etc/passwd"
 
 R="\e[31m"
 G="\e[32m" #added colours
 Y="\e[33m"
 N="\e[0m"
 
-if [ ! -f $file_loc]; then
+if [ ! -f $file_loc ]; then
     echo -e "$file_loc doesn't Exist"
 fi
 
-while IFS=":"  read -r fi
+while IFS=":" read -r fi
 do
-echo -e "$fi"
+echo -e " $fi "
 done < $file_loc
