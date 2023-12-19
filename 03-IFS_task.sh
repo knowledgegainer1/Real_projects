@@ -13,5 +13,6 @@ fi
 
 while IFS=":" read -r f1 f2
 do
-echo -e " $f1  $f2 "
+echo -e " $f1  this is user name "
+echo -e " $f2  this is next full text "
 done < $file_loc
