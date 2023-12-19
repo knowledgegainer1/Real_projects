@@ -6,6 +6,6 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-if [ ! -d $SOURCE_DIR ]; then
+if [ ! -d "$SOURCE_DIR" ]; then
     echo -e " $SOURCE_DIR  Directory $R Not Exist "
 fi
