@@ -13,7 +13,7 @@ fi
 #variables color is blue heren
 files_to_delete=$(find /tmp/Script-logs/ -type f -mtime +14 -name  "*.log")
 
-while IFS=read -r line
+while IFS= read -r line
 do
 echo "deleting $R $line"
 done <<< $files_to_delete
