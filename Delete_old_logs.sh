@@ -15,5 +15,5 @@ files_to_delete=$(find /tmp/Script-logs/ -type f -mtime +14 -name  "*.log")
 
 while IFS= read -r line
 do
-echo "deleting $R $line"
+echo -e  "deleting $R $line"
 done <<< $files_to_delete
