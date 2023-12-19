@@ -13,5 +13,5 @@ fi
 
 while IFS=":" read -r f1 f2
 do
-echo -e " $fi "
+echo -e " $f1  $f2 "
 done < $file_loc
