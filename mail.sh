@@ -3,6 +3,7 @@
 DevOps=$1
 High=$1
 message=$3
+escape=$(printf '%s\n' "$message" | sed -e 's/[]\/$*.^[]/\\&/g');
 clonemaker=$4
  Alert=$5
 
