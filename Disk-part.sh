@@ -9,7 +9,7 @@ while IFS= read line; do
     partition=$(echo $line | awk '{print $1F}')
     if [ $usage -ge $disk_treshold ]; then
         message+="high disk usage on $partition: $usage \n"
-    fi 
+    fi
 done <<<$disk_usage
 
 #lmyn yvbb gmxz gcxz
@@ -17,4 +17,4 @@ done <<<$disk_usage
 #echo "This is a test mail & Date $(date)" | mail -s "message" info@joindevops.com
 
 echo -e "message is :$message"
-echo "$message" | mail -s "High Disk Usage" gottamsadashiva@gmail.com
+echo "$message on $(date)" | mail -s "High Disk Usage" clonemaker74@gmail.com
