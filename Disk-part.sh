@@ -12,4 +12,9 @@ while IFS= read line; do
     fi 
 done <<<$disk_usage
 
+#lmyn yvbb gmxz gcxz
+#[smtp.gmail.com]:587 gottamsadashiva:lmynyvbb gmxz gcxz
+#echo "This is a test mail & Date $(date)" | mail -s "message" info@joindevops.com
+
 echo -e "message is :$message"
+echo "$message" | mail -s "High Disk Usage " gottamsadashiva@gmail.com
