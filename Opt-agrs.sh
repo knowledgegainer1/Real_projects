@@ -26,4 +26,4 @@ if [ -n "$name" ] || [ -w "$wishes" ]; then
     usage 
     exit 1
 fi
-echo "Hello, $name ---> $wishes ,Welcome to the class"
+echo "Hello, $name . $wishes ,Welcome to the class"
