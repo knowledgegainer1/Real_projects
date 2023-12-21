@@ -16,11 +16,11 @@ while getopts ":n:w:h" opt; do
     n) name="$optarg" ;;
     w) wishes="$optarg" ;;
     h)
-        usage;
+        usage
         exit
         ;;
     :)
-        usage;
+        usage
         exit
         ;;
     \?)
@@ -31,9 +31,8 @@ while getopts ":n:w:h" opt; do
     esac
 done
 
-if [ -z "$name" ] || [ -z "$wishes" ] ;
-then
-echo "error:both -n & -w should be passes"
-usageexit
+if [ -z "$name" ] || [ -z "$wishes" ]; then
+    echo "error:both -n & -w should be passes"
+    usage ;exit 1
 fi
 echo "Hello, $name ---> $wishes ,Welcome to the class"
