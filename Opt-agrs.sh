@@ -16,14 +16,14 @@ while getopts ":n:w:h" opt; do
     n) name="$optarg";;
     w) wishes="$optarg";;
     h) usage; exit;;
-    :) usage; exit;;
-    \?) echo "invalid options: -"$optarg"" >&2; usage; exit;;
+    :) usage; exit 1;;
+    \?) echo "invalid options: -"$optarg"" >&2; usage; exit 1;;
     esac
 done
 
-if [ -n "$name" ] || [ -w "$wishes" ]; then
+if [ -z "$name" ] || [ -z "$wishes" ]; then
     echo "error:both -n & -w should be passed"
-    usage ;
-    exit 1 ;
+    usage
+    exit 1 
 fi
 echo "Hello, $name . $wishes ,Welcome to the class"
