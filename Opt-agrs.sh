@@ -23,7 +23,7 @@ done
 
 if [ -n "$name" ] || [ -w "$wishes" ]; then
     echo "error:both -n & -w should be passed"
-    usage 
-    exit 1
+    usage ;
+    exit 1 ;
 fi
 echo "Hello, $name . $wishes ,Welcome to the class"
