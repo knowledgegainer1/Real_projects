@@ -21,7 +21,7 @@ while getopts ":n:w:h" opt; do
     esac
 done
 
-if [ -z "$name" ] || [ -z "$wishes" ]; then
+if [ -n "$name" ] || [ -w "$wishes" ]; then
     echo "error:both -n & -w should be passed"
     usage 
     exit 1
