@@ -30,3 +30,10 @@ while getopts ":n:w:h" opt; do
         ;;
     esac
 done
+
+if [ -z "$name" ] || [ -z "$wishes" ] ;
+then
+echo "error:both -n & -w should be passes"
+usageexit
+fi
+echo "Hello, $name ---> $wishes ,Welcome to the class"
