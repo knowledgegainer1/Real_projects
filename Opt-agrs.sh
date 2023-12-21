@@ -13,18 +13,18 @@ usage() {
 
 while getopts ":n:w:h" opt; do
     case $opt in
-    n) name="$optarg" ;;
-    w) wishes="$optarg" ;;
+    n) name="$optarg";;
+    w) wishes="$optarg";;
     h)
-        usage
+        usage;
         exit
         ;;
     :)
-        usage
+        usage;
         exit
         ;;
     \?)
-        echo "invalid options: -"$optarg"" >&2
+        echo "invalid options: -"$optarg"" >&2; 
         USAGE;
         exit
         ;;
@@ -32,7 +32,8 @@ while getopts ":n:w:h" opt; do
 done
 
 if [ -z "$name" ] || [ -z "$wishes" ]; then
-    echo "error:both -n & -w should be passes"
-    usage ;exit 1
+    echo "error:both -n & -w should be passed"
+    usage 
+    exit 1
 fi
 echo "Hello, $name ---> $wishes ,Welcome to the class"
