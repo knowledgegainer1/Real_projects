@@ -15,9 +15,9 @@ while getopts ":n:w:h" opt; do
     case $opt in
     n) name="$optarg";;
     w) wishes="$optarg";;
-    h) usage; exit ;;
-    :) usage; exit ;;
-    \?) echo "invalid options: -"$optarg"" >&2; usage ;exit;;
+    h) usage; exit;;
+    :) usage; exit;;
+    \?) echo "invalid options: -"$optarg"" >&2; usage; exit;;
     esac
 done
 
