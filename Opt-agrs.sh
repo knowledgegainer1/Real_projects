@@ -19,5 +19,8 @@ while getopts ":n:w:h" opt; do
         usage;
         exit
         ;;
+    :) usage;
+        exit
+        ;;
     esac
 done
