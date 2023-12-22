@@ -6,7 +6,7 @@ instances=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "shipping" "payment"
 
 for i in "${instances[@]}"
  do
- echo "instance is :$i"
+ 
     if [ $i == "mongodb" ] || [ $i == "mysql" ] ||
         [ $i == "shipping" ]
     then
@@ -14,5 +14,6 @@ for i in "${instances[@]}"
     else
         instance_type="t2.micro"
     fi
-    aws ec2 run-instances --image-id ami-03265a0778a880afb --instance-type $instance_type --security-group-ids sg-0a719cdd2c1f8d094  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]"  --query 'Instances[0].PrivateIpAddress' --output text
+    ip_address=$(aws ec2 run-instances --image-id ami-03265a0778a880afb --instance-type $instance_type --security-group-ids sg-0a719cdd2c1f8d094  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]"  --query 'Instances[0].PrivateIpAddress' --output text)
+    echo "$ip_address instance is :$i"
 done
