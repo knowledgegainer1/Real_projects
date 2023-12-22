@@ -4,7 +4,8 @@ ami=ami-03265a0778a880afb
 sg=sg-0a719cdd2c1f8d094
 instances=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "shipping" "payment" "dispatch" "web")
 
-for i in "${instances[@]}"; do
+for i in "${instances[@]}"
+ do
     if [ $i == "mongodb"] || [ $i == "mysql" ] ||
         [ $i == "shipping" ]; then
         instance_type="t3.small"
