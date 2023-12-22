@@ -6,7 +6,7 @@ instances=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "shipping" "payment"
 
 for i in "${instances[@]}"
  do
- echo "instance is :$1"
+ echo "instance is :$i"
     if [ $i == "mongodb" ] || [ $i == "mysql" ] ||
         [ $i == "shipping" ]
     then
