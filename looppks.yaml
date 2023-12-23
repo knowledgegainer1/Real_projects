@@ -1,0 +1,11 @@
+- name: loops
+  hosts: localhost
+  tasks:
+    - name: loop printed
+      ansible.builtin.package:
+        msg: "hello {{item}}"
+        state: present
+      loop:
+        - mysql
+        - postfix
+        - git
