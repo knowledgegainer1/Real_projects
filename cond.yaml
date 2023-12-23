@@ -2,15 +2,15 @@
   hosts: localhost
   tasks:
    - name: check robo shot exist or ot
-    ansible.builtin.command: id roboshop
-    register: user
-    ignore_errors: true
+     ansible.builtin.command: id roboshop
+     register: user
+     ignore_errors: true
 
-  - name: printing
-    ansible.builtin.debug:
-     msg: "{{user}}"
+   - name: printing
+     ansible.builtin.debug:
+      msg: "{{user}}"
 
-  - name: print exit status
-    ansible.builtin.debug:
-    msg: "status is {{user.rc}}"
+   - name: print exit status
+     ansible.builtin.debug:
+     msg: "status is {{user.rc}}"
      
