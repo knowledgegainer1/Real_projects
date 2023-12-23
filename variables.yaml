@@ -1,9 +1,9 @@
-- name: Echo playbook
+- name: play-1
   hosts: localhost
-  gather_facts: no
+  vars:
+    course: "DevOps"
+    trainer: "ssadashiva"
   tasks:
-    - name: Echo inventory_hostname
+    - name: sub-task
       ansible.builtin.debug:
-        msg:
-          - "Hello from Ansible playbook!"
-          - "This is running on {{ inventory_hostname }}"
+        msg: "HI this is a sample program of {{ course}} about {{trainer}}"
