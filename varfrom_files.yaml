@@ -4,7 +4,5 @@
   - variables.yaml
   tasks:
     - name: sub-task
-      vars:
-       course: "devops with ansible"
       ansible.builtin.debug:
         msg: "HI this is a sample program of {{ course}} about {{trainer}}"
