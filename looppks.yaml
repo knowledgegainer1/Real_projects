@@ -1,9 +1,10 @@
 - name: loops
   hosts: localhost
+  become: yes
   tasks:
     - name: loop printed
       ansible.builtin.package:
-        msg: "hello {{item}}"
+        name: { { item } }
         state: present
       loop:
         - mysql
