@@ -9,5 +9,5 @@
     private: true #user can in run time
   tasks:
   - name: print values
-   ansible.builtin.debug:
-    msg: "{{usernane}} || {{password}}"
+    ansible.builtin.debug:
+      msg: "{{usernane}} || {{password}}"
