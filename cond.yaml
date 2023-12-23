@@ -1,0 +1,12 @@
+- name: condtionl testing
+  hosts: localhost
+  tasks:
+   -name: check robo shot exist or ot
+    ansible.builtin.command: id roboshop
+     register: user
+    ignore_errors: true
+
+  -name: printing
+    ansible.builtin.debug:
+     msg: "{{user}}"
+     
