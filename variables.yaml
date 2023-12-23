@@ -4,6 +4,6 @@
     course: "DevOps"
     trainer: "sivekumar"
   tasks:
-  - name: sub-task
-    ansible.builtin.debug:
-     msg:"HI this is  sample grogram of {{course}} aabout {{trainer}}"
+   - name: sub-task
+     ansible.builtin.debug:
+      msg:"HI this is  sample grogram of {{course}} aabout {{trainer}}"
