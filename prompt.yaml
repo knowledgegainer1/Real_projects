@@ -1,0 +1,13 @@
+- name: prompt type
+  hosts: localhost
+  vars_prompt:
+  - name: username
+    prompt: please tnter username
+    private: false #user can in run time
+  - name: password
+    prompt: please tnter password
+    private: true #user can in run time
+  tasks:
+  - name: print values
+   ansible.builtin.debug:
+    msg: "{{usernane}} || {{password}}"
